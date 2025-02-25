@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Precio de Inmueble</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; padding: 20px; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select, button { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #007bff; color: white; font-size: 16px; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Predicción de Precio de Inmueble</h2>
+        <form id="realEstateForm">
+            <label for="area">Área (m²)</label>
+            <input type="number" id="area" min="20" required>
+
+            <label for="habitaciones">Habitaciones</label>
+            <input type="number" id="habitaciones" min="1" max="10" required>
+
+            <label for="banos">Baños</label>
+            <input type="number" id="banos" min="1" max="10" required>
+
+            <label for="administracion">Administración ($)</label>
+            <input type="number" id="administracion" min="0" required>
+
+            <label for="parqueaderos">Parqueaderos</label>
+            <input type="number" id="parqueaderos" min="0" required>
+
+            <label for="sector">Sector</label>
+            <select id="sector" required>
+                <option value="">Seleccione un sector</option>
+                <option value="Chapinero" data-lat="4.6486" data-lng="-74.0628">Chapinero</option>
+                <option value="Usaquén" data-lat="4.7105" data-lng="-74.0301">Usaquén</option>
+                <option value="Suba" data-lat="4.7550" data-lng="-74.0853">Suba</option>
+                <option value="Teusaquillo" data-lat="4.6485" data-lng="-74.0732">Teusaquillo</option>
+                <option value="Engativá" data-lat="4.6834" data-lng="-74.1110">Engativá</option>
+            </select>
+
+            <label for="estrato">Estrato</label>
+            <select id="estrato" required>
+                <option value="">Seleccione un estrato</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <label for="antiguedad">Antigüedad</label>
+            <select id="antiguedad" required>
+                <option value="">Seleccione la antigüedad</option>
+                <option value="<5">Menos de 5 años</option>
+                <option value="5-10">5 a 10 años</option>
+                <option value="10-20">10 a 20 años</option>
+                <option value=">20">Más de 20 años</option>
+                <option value="Remodelado">Remodelado</option>
+            </select>
+
+            <label for="longitud">Longitud</label>
+            <input type="number" id="longitud" readonly>
+
+            <label for="latitud">Latitud</label>
+            <input type="number" id="latitud" readonly>
+
+            <button type="submit">Predecir Precio</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("sector").addEventListener("change", function() {
+            const selectedOption = this.options[this.selectedIndex];
+            document.getElementById("latitud").value = selectedOption.dataset.lat || "";
+            document.getElementById("longitud").value = selectedOption.dataset.lng || "";
+        });
+
+        document.getElementById("realEstateForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Formulario enviado correctamente");
+        });
+    </script>
+</body>
+</html>
