@@ -4,7 +4,7 @@ This is a machine learning project designed to predict Real State prices in Bogo
 
 # Data Set
 
-The original data was obtained from the repository [bogota-apartments] (https://github.com/builker-col/bogota-apartments/). The raw data used is V 1.3.0 and was downloaded from this [container]("https://www.dropbox.com/scl/fi/63rkv8ehjcqogptpn06gp/builker.scrapy_bogota_apartmentsV1.3.0_october_1_2023.json?rlkey=wvwpyu3buy0ii84wxayywz8ot&dl=1") you can also download it from this [link](). A converted CSV file is added into this repository. Look for [IA-MODEL/data/builker_raw_data](). Or preprocess by your self using notebook [data-preprocessing.ipyht]().
+The original data was obtained from the repository [bogota-apartments](https://github.com/builker-col/bogota-apartments/). The raw data used is V 1.3.0 and was downloaded from this [container](https://www.dropbox.com/scl/fi/63rkv8ehjcqogptpn06gp/builker.scrapy_bogota_apartmentsV1.3.0_october_1_2023.json?rlkey=wvwpyu3buy0ii84wxayywz8ot&dl=1) you can also download it from this [link](). A converted CSV file is added into this repository. Look for [IA-MODEL/data/builker_raw_data](). Or preprocess by your self using notebook [data-preprocessing.ipyht]().
 
 The raw data was gathered using scrapping techniques from:
 - [Metrocuadrado](https://www.metrocuadrado.com/)
