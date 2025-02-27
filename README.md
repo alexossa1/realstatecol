@@ -34,15 +34,4 @@ Acknowledgments:
 - Outlier Detection: Identifying not congruent data, realted with prices and area
 - Data transformation: Transforming categorical and scaling numerical features.
 
-# Instalation and requirements
------------
-# models and experiments
------------
-# How to Use
------------
-# Results and Visualization
------------
-# Contact
------------
-
 
